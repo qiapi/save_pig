@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <image style="width: 80px; height: 80px; margin-left:10px" src="../../public/fingerPrint.png"  bind:touchstart="startTimer" bind:touchend="stopTimer"></image>
+  </view>
+  <view class="playground">
+    <view class="rule">
+      <view>金币：{{coin}}</view>
+      <view>规则：按住上方指纹处，当滑条滑动至0时即绿色区域消失时松开则胜利，加金币，否则扣金币</view>
+      <view>当前关卡：{{level}}</view>
+    </view>
+    <view class="wrap">
+      <view class="outer">
+        <view class="block" style="width:{{blockWidth}}%"></view>
+      </view>
+      <image style="width: 80px; height: 80px; left: {{faceLeft}}px" src="../../public/face.gif" class="face"></image>
+      <image style="width: 120px; height: 80px; left: {{pigLeft}}px" src="../../public/pig2.gif" class="pig"></image>
+    </view>
+    <button bindtap="nextLevel" disabled="{{!canNext}}" class="btn {{canNext?'activeBtn':'disbaleBtn'}}">{{btnText}}</button>
+  </view>
+</view>

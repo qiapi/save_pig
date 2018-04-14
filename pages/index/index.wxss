@@ -1,0 +1,68 @@
+/**index.wxss**/
+page {
+  background-color: #ec407a;
+}
+ .userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} 
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+}
+
+.face {
+    position: relative;
+    z-index: 99;
+}
+.pig {
+    position: relative;
+    display: inline-block;
+    z-index: 99;
+}
+
+.wrap {
+    position: relative;
+}
+
+.outer {
+    width: 50%;
+    height: 80px;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 80px;
+    top: 5px;
+}
+.block {
+    background-color: greenyellow;
+    height: 100%;
+    float: right;
+}
+
+.rule {
+  margin: 20rpx 50rpx;
+}
+.rule view {
+  color: #fff;
+  margin: 10rpx 0;
+}
+
+.activeBtn {
+  background-color: #f9a825;
+  color: #fff;
+}
+.disableBtn {
+  background-color: #bdbdbd;
+}
+
+.btn {
+  margin: 50rpx;
+}
